@@ -28,6 +28,30 @@ function TypingText({ text, speed = 60 }) {
   );
 }
 
+const projects = [
+  {
+    title: "Student Paycheck Buddy",
+    tech: "Python",
+    description:
+      "Developed a personal finance tool to track paychecks, manage expenses, and analyze spending patterns. Designed to help users better understand their financial habits and savings over time.",
+    link: "https://github.com/JasvinK/Student-Paycheck-Buddy",
+  },
+  {
+    title: "AVR LCD Digital Clock",
+    tech: "C • Arduino • Embedded Systems",
+    description:
+      "Built a digital clock on an Arduino Mega2560 using timer interrupts and a 2×16 LCD display. Implemented real-time clock functionality along with a stopwatch using low-level embedded programming techniques.",
+    link: "https://github.com/JasvinK/Avr-lcd-digital-clock",
+  },
+  {
+    title: "Web Protocol Analyzer",
+    tech: "Python • Networking",
+    description:
+      "Created a networking tool that analyzes websites by detecting HTTP/2 support, cookies, redirects, and authentication requirements to better understand how web protocols function.",
+    link: "https://github.com/JasvinK/python-web-protocol-analyzer",
+  },
+];
+
 const timelineItems = [
   {
     title: "Community Leader (CL)",
@@ -122,7 +146,7 @@ export default function App() {
               <Github size={22} />
               <span>GitHub</span>
             </a>
-            
+
             <a
               href="/Resume.pdf"
               target="_blank"
@@ -143,6 +167,34 @@ export default function App() {
         </div>
       </section>
 
+
+      <section className="projects-section">
+        <div className="container">
+          <h2 className="center-title">Projects</h2>
+
+          <div className="project-grid">
+            {projects.map((project) => (
+              <div key={project.title} className="project-card">
+                <h3>{project.title}</h3>
+                <p className="project-tech">{project.tech}</p>
+                <p>{project.description}</p>
+
+                <a
+                  href={project.link}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="project-link"
+                >
+                  <Github size={18} />
+                  <span>View on GitHub</span>
+                </a>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="timeline-section"></section>
       <section className="timeline-section">
         <div className="container">
           <h2>Work Experience</h2>
