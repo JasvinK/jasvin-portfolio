@@ -179,7 +179,7 @@ export default function App() {
               > 
                 <div className="timeline-card">
                 <h3>{project.title}</h3>
-                <p className="date">{project.tech}</p>
+                <p className="project-tech-line">{project.tech}</p>
                 <p>{project.description}</p>
 
                 <a
