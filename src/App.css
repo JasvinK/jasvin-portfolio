@@ -438,4 +438,17 @@ body {
   color: #111827;
 }
 
+.projects-timeline-section {
+  background:
+    radial-gradient(circle at 20% 20%, rgba(168, 85, 247, 0.14), transparent 26%),
+    radial-gradient(circle at 80% 30%, rgba(56, 189, 248, 0.14), transparent 24%),
+    radial-gradient(circle at top, #08173f, #020617 75%);
+}
+
+.project-tech-line {
+  color: #2563eb;
+  font-weight: 700;
+  margin: 0 0 12px;
+}
+
 }

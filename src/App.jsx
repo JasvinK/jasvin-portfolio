@@ -167,16 +167,19 @@ export default function App() {
         </div>
       </section>
 
-
-      <section className="projects-section">
+      <section className="timeline-section projects-timeline-section">
         <div className="container">
-          <h2 className="center-title">Projects</h2>
+          <h2>Projects</h2>
 
-          <div className="project-grid">
-            {projects.map((project) => (
-              <div key={project.title} className="project-card">
+          <div className="timeline">
+            {projects.map((project, index) => (
+              <div
+                key={project.title}
+                className={`timeline-row ${index % 2 === 0 ? "left" : "right"}`}
+              > 
+                <div className="timeline-card">
                 <h3>{project.title}</h3>
-                <p className="project-tech">{project.tech}</p>
+                <p className="date">{project.tech}</p>
                 <p>{project.description}</p>
 
                 <a
@@ -187,7 +190,9 @@ export default function App() {
                 >
                   <Github size={18} />
                   <span>View on GitHub</span>
-                </a>
+                  </a>
+                </div>
+                <div className="timeline-dot" />
               </div>
             ))}
           </div>
